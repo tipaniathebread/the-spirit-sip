@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://vhm46b7os4pa"]
+
+[ext_resource type="Texture2D" uid="uid://bpec15u8syb2e" path="res://assets/cafebackground.jpg" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cnhidrhlcdg2" path="res://character.tscn" id="2_0xm2m"]
+
+[node name="main" type="Node2D" unique_id=33786229]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=561248974]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1933504729]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ig7tw")
+
+[node name="Character" parent="CanvasLayer" unique_id=1927939258 instance=ExtResource("2_0xm2m")]
+position = Vector2(543, 434)
