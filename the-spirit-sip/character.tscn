@@ -4,5 +4,5 @@
 
 [node name="Character" type="Node2D" unique_id=1927939258]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=798521781]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=855189399]
 texture = ExtResource("1_glpr6")
