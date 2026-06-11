@@ -1,24 +1,38 @@
 [gd_scene format=3 uid="uid://b6jx56mpui54m"]
 
+[ext_resource type="Texture2D" uid="uid://cfjsoiu6nxfih" path="res://assets/Custom Border and Panels Menu All Part/Border All 11.png" id="1_njptv"]
+
+[sub_resource type="Theme" id="Theme_njptv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2x5cq"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+texture = ExtResource("1_njptv")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 22.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(320.01956, 63.67882, 63.99655, 65.06952)
+
 [node name="dialogueUI" type="Control" unique_id=556354126]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = -3.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="dialoguebox" type="PanelContainer" parent="." unique_id=1081854655]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=608634030]
+[node name="Panel" type="Panel" parent="." unique_id=1988785397]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 422.0
+offset_top = 420.0
+offset_right = 731.0
+offset_bottom = 578.0
+theme = SubResource("Theme_njptv")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2x5cq")
