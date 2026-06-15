@@ -65,8 +65,8 @@ var spirits = [
 ]
 
 
-# These connect the script to the child nodes in your scene.
-# The names must match your scene tree exactly.
+# These connect the script to the child nodes in scene.
+# The names must match scene tree exactly.
 @onready var title_label: Label = $TitleLabel
 @onready var spirit_label: Label = $SpiritLabel
 @onready var dialogue_label: Label = $DialoguePanel/DialogueLabel
