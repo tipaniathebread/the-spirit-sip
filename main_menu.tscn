@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dch3e6bcbyf0d"]
 
+[ext_resource type="Texture2D" uid="uid://dd4bapl0g1xk" path="res://assets/cafebackground_2.jpg" id="1_06t4h"]
+[ext_resource type="FontFile" uid="uid://bwmtvxurgt2ag" path="res://KiwiSoda.ttf" id="2_7vrkn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
+texture = ExtResource("1_06t4h")
+modulate_color = Color(0.3403393, 0.34033933, 0.3403393, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.61363995, 0.2784, 0.87, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -9,6 +16,28 @@ corner_radius_bottom_left = 20
 shadow_color = Color(0, 0, 0, 0.14117648)
 shadow_size = 3
 shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0.8352941, 0.63529414, 0.9882353, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.8862745, 0.7529412, 0.99215686, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.14117648)
+shadow_size = 3
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
 
 [node name="MainMenu" type="Control" unique_id=1641838929]
 layout_mode = 3
@@ -18,20 +47,112 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=337256694]
+[node name="Panel" type="Panel" parent="." unique_id=1434870822]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1372678261]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -146.0
-offset_top = -46.5
-offset_right = 146.0
-offset_bottom = 46.5
+offset_left = -162.5
+offset_top = -44.0
+offset_right = 162.5
+offset_bottom = 209.25
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/separation = 12
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=337256694]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.33584508, 0.06113229, 0.3876033, 1)
+theme_override_colors/font_focus_color = Color(0.48170096, 0.11116881, 0.5508902, 1)
+theme_override_colors/font_pressed_color = Color(0.458147, 0.10889945, 0.5269333, 1)
+theme_override_colors/font_hover_color = Color(0.757081, 0.30837625, 0.846052, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.54440504, 0.13689923, 0.62094754, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
 theme_override_font_sizes/font_size = 44
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
 text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=876146653]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.33584508, 0.06113229, 0.3876033, 1)
+theme_override_colors/font_focus_color = Color(0.48170096, 0.11116881, 0.5508902, 1)
+theme_override_colors/font_pressed_color = Color(0.458147, 0.10889945, 0.5269333, 1)
+theme_override_colors/font_hover_color = Color(0.757081, 0.30837625, 0.846052, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.54440504, 0.13689923, 0.62094754, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=535950755]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.33584508, 0.06113229, 0.3876033, 1)
+theme_override_colors/font_focus_color = Color(0.48170096, 0.11116881, 0.5508902, 1)
+theme_override_colors/font_pressed_color = Color(0.458147, 0.10889945, 0.5269333, 1)
+theme_override_colors/font_hover_color = Color(0.757081, 0.30837625, 0.846052, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.54440504, 0.13689923, 0.62094754, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=1364479019]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -179.0
+offset_right = 267.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.6600986, 0.34590623, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.28475326, 0.11879999, 0.44, 0.8392157)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 93
+text = "The Spirit Sip"
+horizontal_alignment = 1
+vertical_alignment = 1
