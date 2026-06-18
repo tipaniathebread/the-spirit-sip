@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnp3qr4ut5bou"]
 
-[ext_resource type="Script" uid="uid://b0x1pgsfrmaqn" path="res://maincafe.gd" id="1_uirit"]
+[ext_resource type="Script" uid="uid://b0x1pgsfrmaqn" path="res://maincafe.gd" id="1_nfyea"]
 
 [node name="Maincafe" type="Control" unique_id=1757790475]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_uirit")
+script = ExtResource("1_nfyea")
 
 [node name="Background" type="ColorRect" parent="." unique_id=2065140556]
 layout_mode = 1
@@ -19,6 +19,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.8229651, 0.7401931, 0.97668904, 0.67058825)
+
+[node name="DialoguePanel" type="Panel" parent="." unique_id=2107571969]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 430.0
+offset_right = 995.0
+offset_bottom = 550.0
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=1794648167]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 375.0
+offset_right = 995.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+
+[node name="DialogueLabel" type="Label" parent="." unique_id=147228879]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 450.0
+offset_right = 965.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 24
+text = "Lonely Spirit:
+I miss the sound of rain at home..."
+autowrap_mode = 3
 
 [node name="TitleLabel" type="Label" parent="." unique_id=577369978]
 layout_mode = 0
@@ -51,53 +78,26 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 28
 text = "Memory Jar: 0/5"
 
-[node name="DialoguePanel" type="Panel" parent="." unique_id=2107571969]
+[node name="CoffeeButton" type="Button" parent="." unique_id=1719917441]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 430.0
-offset_right = 995.0
-offset_bottom = 550.0
-metadata/_edit_group_ = true
-
-[node name="FeedbackLabel" type="Label" parent="DialoguePanel" unique_id=1794648167]
-layout_mode = 0
-offset_top = -55.0
-offset_right = 900.0
-offset_bottom = -10.0
-theme_override_font_sizes/font_size = 20
-autowrap_mode = 3
-
-[node name="DialogueLabel" type="Label" parent="DialoguePanel" unique_id=147228879]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 870.0
-offset_bottom = 110.0
-theme_override_font_sizes/font_size = 24
-text = "Lonely Spirit:
-I miss the sound of rain at home..."
-autowrap_mode = 3
-
-[node name="CoffeeButton" type="Button" parent="DialoguePanel" unique_id=1719917441]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 140.0
-offset_right = 245.0
-offset_bottom = 195.0
+offset_left = 120.0
+offset_top = 570.0
+offset_right = 340.0
+offset_bottom = 625.0
 text = "Coffee"
 
-[node name="TeaButton" type="Button" parent="DialoguePanel" unique_id=216239653]
+[node name="TeaButton" type="Button" parent="." unique_id=216239653]
 layout_mode = 0
-offset_left = 315.0
-offset_top = 140.0
-offset_right = 535.0
-offset_bottom = 195.0
+offset_left = 410.0
+offset_top = 570.0
+offset_right = 630.0
+offset_bottom = 625.0
 text = "Tea"
 
-[node name="JuiceButton" type="Button" parent="DialoguePanel" unique_id=22179987]
+[node name="JuiceButton" type="Button" parent="." unique_id=22179987]
 layout_mode = 0
-offset_left = 605.0
-offset_top = 140.0
-offset_right = 825.0
-offset_bottom = 195.0
+offset_left = 700.0
+offset_top = 570.0
+offset_right = 920.0
+offset_bottom = 625.0
 text = "Juice"
