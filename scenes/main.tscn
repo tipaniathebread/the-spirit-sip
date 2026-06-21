@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://bnp3qr4ut5bou"]
+
+[ext_resource type="Script" uid="uid://cfdyn3bl26mut" path="res://scenes/main.gd" id="1_o5qli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgp6g"]
+bg_color = Color(0.1764706, 0.105882354, 0.23921569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7176471, 0.26666668, 0.72156864, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
+bg_color = Color(0.1764706, 0.105882354, 0.23921569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.88235295, 0.8784314, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wfyh"]
+bg_color = Color(0.1764706, 0.105882354, 0.23921569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.52156866, 0.5529412, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sugp2"]
+bg_color = Color(0.1764706, 0.105882354, 0.23921569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7176471, 0.26666668, 0.72156864, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[node name="Main" type="Control" unique_id=1174815749]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o5qli")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1383613562]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882354, 0.12156863, 0.23137255, 1)
+
+[node name="MainContainer" type="MarginContainer" parent="." unique_id=1399773515]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="ContentBox" type="VBoxContainer" parent="MainContainer" unique_id=748864888]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="TopBar" type="HBoxContainer" parent="MainContainer/ContentBox" unique_id=1907618589]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MainContainer/ContentBox/TopBar" unique_id=635894930]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.52156866, 0.5529412, 1)
+theme_override_font_sizes/font_size = 32
+text = "The Spirit Sip"
+
+[node name="MemoryJarLabel" type="Label" parent="MainContainer/ContentBox/TopBar" unique_id=1133415200]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3764706, 0.88235295, 0.8784314, 1)
+theme_override_font_sizes/font_size = 20
+text = "Memory Jar: 0 Fragments"
+
+[node name="StoryPanel" type="PanelContainer" parent="MainContainer/ContentBox" unique_id=1797488324]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sgp6g")
+
+[node name="StoryBox" type="VBoxContainer" parent="MainContainer/ContentBox/StoryPanel" unique_id=1697536801]
+layout_mode = 2
+
+[node name="SpiritIconLabel" type="Label" parent="MainContainer/ContentBox/StoryPanel/StoryBox" unique_id=1199946105]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3764706, 0.88235295, 0.8784314, 1)
+theme_override_font_sizes/font_size = 80
+text = "👻"
+horizontal_alignment = 1
+
+[node name="SpiritNameLabel" type="Label" parent="MainContainer/ContentBox/StoryPanel/StoryBox" unique_id=1784288376]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3764706, 0.88235295, 0.8784314, 1)
+theme_override_font_sizes/font_size = 24
+text = "Spirit"
+
+[node name="DialogueLabel" type="Label" parent="MainContainer/ContentBox/StoryPanel/StoryBox" unique_id=202591155]
+custom_minimum_size = Vector2(700, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9647059, 0.9098039, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "I miss the warmth of home...
+Something that feels like a hug."
+autowrap_mode = 3
+
+[node name="DrinkPromptLabel" type="Label" parent="MainContainer/ContentBox" unique_id=485911031]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.52156866, 0.5529412, 1)
+theme_override_font_sizes/font_size = 24
+text = "Choose a drink"
+
+[node name="DrinkChoiceBox" type="HBoxContainer" parent="MainContainer/ContentBox" unique_id=875250164]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="TeaButton" type="Button" parent="MainContainer/ContentBox/DrinkChoiceBox" unique_id=413184057]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9647059, 0.9098039, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_o5qli")
+text = "Tea"
+
+[node name="CoffeeButton" type="Button" parent="MainContainer/ContentBox/DrinkChoiceBox" unique_id=395931968]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9647059, 0.9098039, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_0wfyh")
+text = "Coffee"
+
+[node name="JuiceButton" type="Button" parent="MainContainer/ContentBox/DrinkChoiceBox" unique_id=1674426947]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9647059, 0.9098039, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_sugp2")
+text = "Juice"
+
+[node name="FeedbackLabel" type="Label" parent="MainContainer/ContentBox" unique_id=1529828232]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3764706, 0.88235295, 0.8784314, 1)
+theme_override_font_sizes/font_size = 18
+text = "Choose the drink that matches the spirit’s feeling."
+
+[connection signal="pressed" from="MainContainer/ContentBox/DrinkChoiceBox/TeaButton" to="." method="_on_tea_button_pressed"]
+[connection signal="pressed" from="MainContainer/ContentBox/DrinkChoiceBox/CoffeeButton" to="." method="_on_coffee_button_pressed"]
+[connection signal="pressed" from="MainContainer/ContentBox/DrinkChoiceBox/JuiceButton" to="." method="_on_juice_button_pressed"]

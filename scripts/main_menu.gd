@@ -13,7 +13,7 @@ func _ready():
 	options.visible = false
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://maincafe.tscn")
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 
 func _on_options_pressed() -> void:
